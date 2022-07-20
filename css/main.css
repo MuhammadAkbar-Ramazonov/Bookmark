@@ -5,8 +5,6 @@
 * Browsers: last 4 version
 */
 
-
-
 :root{
   /* --main-text-color : #fff; */
   /* --main-bg-color : #fff; */
@@ -627,6 +625,7 @@ ul{
           justify-content: center;
 }
 .site-inner-input-wrapper{
+  position: relative;
   width: 300px;
   margin-right: 16px;
   background-color: #FA5959;
@@ -663,13 +662,15 @@ ul{
   
 }
 .user-input:not(:-moz-placeholder-shown):not(:focus):invalid ~ .user-input-text{
-  display: inline-block;
+  opacity: 1;
+
 }
 .user-input:not(:-ms-input-placeholder):not(:focus):invalid ~ .user-input-text{
-  display: inline-block;
+  opacity: 1;
+
 }
 .user-input:not(:placeholder-shown):not(:focus):invalid ~ .user-input-text{
-  display: inline-block;
+  opacity: 1;
 }
 .user-input::-webkit-input-placeholder{
   font-size: 14px;
@@ -702,7 +703,9 @@ ul{
   color: #242A45;
 }
 .user-input-text {
-  display: none;
+  position: absolute;
+  top: 39px;
+  left: 0;
   font-style: italic;
   font-size: 10px;
   line-height: 12px;
@@ -711,6 +714,7 @@ ul{
   color: #FFFFFF;
   background-color: #FA5959;
   border-radius: 0 0 5px 5px;
+  opacity: 0;
   
 }
 .site-inner-form-btn {
@@ -778,7 +782,7 @@ ul{
 .site-footer-link:hover{
   color: #FA5959;
 }
-
+ 
 .facebook{
   margin-right: 40px;
 }
