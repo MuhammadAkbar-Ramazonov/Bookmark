@@ -136,6 +136,11 @@ ul{
   display: -ms-flexbox;
   display: flex;
 }
+
+.sitenav__list{
+  margin: 0;
+} 
+
 .sitenav__item:nth-child(2) {
   margin-right: 48px;
   margin-left: 44px;
@@ -178,7 +183,7 @@ ul{
 /* hero section start */
 .hero {
   padding: 100px 0;
-  background-image: url("../image/top-bg.svg");
+  background-image: url("../image/computer.png");
   background-repeat: no-repeat;
   background-position: calc(50% + 596px) ;
 }
@@ -797,4 +802,17 @@ ul{
 
 .site-footer__img:hover{
   fill: #FA5959;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+ 
+  .hero{
+    background-image: url("../image/computer@2x.png");
+  }
 }
