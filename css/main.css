@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 :root{
   /* --main-text-color : #fff; */
@@ -289,8 +296,11 @@ ul{
   opacity: 0.5;
 }
 .features-section__list-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 730px;
   margin: 0 auto;
   margin-bottom: 129px;
