@@ -16,9 +16,12 @@
 
 /* GENERAL */
 
+
+
 *,
 *::before,
 *::after{
+  
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -261,9 +264,7 @@ ul{
 /* Features section start */
 .features-section {
   padding: 100px 0 180px 0;
-  background-image: url(../image/down-bg.svg);
-  background-repeat: no-repeat;
-  background-position: calc(50% - 547px) calc(50% + 205px);
+  
 }
 .features-section__inner {
   width: 540px;
@@ -287,7 +288,9 @@ ul{
   color: #242A45;
   opacity: 0.5;
 }
-.features-section__nav {
+.features-section__list-top {
+  display: flex;
+  justify-content: space-around;
   width: 730px;
   margin: 0 auto;
   margin-bottom: 129px;
@@ -298,29 +301,53 @@ ul{
   line-height: 17px;
   text-align: center;
   letter-spacing: 0.533333px;
-  padding-bottom: 31px;
   color: #242A45;
   border-bottom: 4px solid transparent;
   opacity: 0.75;
 }
-.features-section__text:hover{
-  border-bottom: 4px solid #FA5959;
+.features-section__item-top{
+padding-right: 54px;
+padding-bottom: 31px;
+padding-left: 53px;
 }
+.features-section__item-top--active{
+  display: block;
+  border-bottom: 4px solid #FA5959;
+
+}
+
 .features-section__text:hover{
   color: #FA5959;
 }
 
-.features-section__text--center-item{
-  margin-right: 120px;
-  margin-left: 91px;
+
+.features-section__item{
+  display: none;
+  z-index: 10;
+  background-image: url("../image/down-bg.svg");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 525px) center;
+  padding: 105px 0 105px 0;
 }
 
-.features-section__wrapper {
+.features-section__item:nth-child(2){
+  background-image: url("../image/search-bg.svg");
+}
+.features-section__item:nth-child(3){
+  background-image: url("../image/network.svg");
+}
+
+.features-section__wrapper{
   width: 445px;
   margin-right: 0;
   margin-left: auto;
 }
+
+.features-section__item--activ{
+  display: block;
+}
 .features-section__word {
+  right: 0;
   font-weight: 500;
   font-size: 32px;
   line-height: 52px;
@@ -592,7 +619,7 @@ ul{
   color: #FFFFFF;
   background-color: #5267DF;
   -webkit-box-shadow: 0px 8px 8px -4px #495dcf33;
-          box-shadow: 0px 8px 8px -4px #495dcf33;
+  box-shadow: 0px 8px 8px -4px #495dcf33;
   border-radius: 5px;
 }
 
@@ -812,7 +839,7 @@ only screen and (                -webkit-min-device-pixel-ratio: 2),
 only screen and (                -o-min-device-pixel-ratio: 2/1),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
- 
+  
   .hero{
     background-image: url("../image/computer@2x.png");
   }
